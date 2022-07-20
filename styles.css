@@ -2,6 +2,7 @@
     --green: #81f0a3;
     --black: #363636;
     --blue: #092132;
+    --brown: #B2853B;
 }
 
 * {
@@ -35,17 +36,20 @@ img{
     margin-left: 5%;
 }
 
-ul {
+header ul {
     list-style: none;
     display: flex;
     font-size: 1.5rem;
     margin-right: 0.2rem;
 }
 
-li {
+header ul li {
     margin: 0px 12px;
 }
 
+header a:hover{
+    text-decoration: underline white;
+}
 
 main{
     display:flex;
@@ -70,6 +74,8 @@ p{
 }
 
 footer{
+    display: flex;
+    justify-content: space-around;
     background-color:var(--black);
     border-color: var(--black);
     border-top: var(--green);
@@ -77,6 +83,14 @@ footer{
     color: white;
 }
 
+footer h3{
+    font-size: 26px;
+    color: var(--brown);
+}
+
+footer p{
+    font-size: 20px;
+}
 .container-items{
     display: flex;
 }
@@ -159,6 +173,30 @@ footer{
     font-size: 20px;
 }
 
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.phone i{
+    font-size: 20px;
+}
+
+
+.social_medias i{
+    font-size: 30px;
+}
+.social_medias ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact , .ubic , .social_medias , .img{
+    margin-top: 1rem;
+}
 @media (max-width: 974px){
     .btn__container{
         margin-right: 5%;
