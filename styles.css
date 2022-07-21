@@ -19,7 +19,7 @@ body {
 header{ 
     width: 100%;
     top: 0;
-    position: fixed;
+    position: sticky;
     background-color:var(--black);
     display: flex;
     flex-direction: row;
@@ -140,7 +140,7 @@ footer p{
     border-color: var(--green);
     border-style: solid;
     border-radius: 20px;
-    margin: 166px 0.5rem 32px 0.5rem;
+    margin: 32px 0.5rem;
 }
 
 .about__content {
