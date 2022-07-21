@@ -28,8 +28,8 @@ header{
     border-color: var(--black);
     border-bottom: var(--green);
     border-style: solid;
+    z-index: 1;
 }
-
 
 header ul {
     list-style: none;
@@ -106,11 +106,18 @@ footer p{
 }
 
 /* CLASES */
-/* CLASES DEL HEADER */
-.container-items{
+/* CLASES DEL HEADER */ 
+.navbar ul{
     display: flex;
 }
-.btn__container{
+
+.navbar i{
+    font-size: 30px;
+    color: white;
+    display: none;
+}
+
+#toggle-menu{
     display: none;
 }
 /* CLASES DE ABOUT SECTION */
@@ -234,12 +241,27 @@ footer p{
 /* -------------------RESPONSIVE------------------------------------------ */
 
 @media (max-width: 980px){
-    .btn__container{
-        display:flex;
+    .navbar i{
+        display:block;
         margin-right: 2rem;
     }
-    .container-items{
-        display: none;
+    .navbar ul{
+        background-color: var(--black);
+        width: 100%;
+        height: calc(100vh - 141px);
+        position: absolute;
+        top: 141px;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        transform: translateY(200%);
+        transition: all 0.4s ease-out;
+    }
+
+    #toggle-menu:checked + .container-items{
+        transform: translateY(0%);
+        transition: all 0.4s ease-out;
     }
 }
 @media (max-width: 876px){
