@@ -31,9 +31,9 @@ header{
 
 img{
     border-radius: 20px;
-    width: 130px;
-    margin-top: 4px;
-    margin-left: 5%;
+    width: 8.125rem;
+    margin-top: 0.25rem;
+    margin-left: 7%;
 }
 
 header ul {
@@ -47,8 +47,19 @@ header ul li {
     margin: 0px 12px;
 }
 
+header ul li:hover{
+    transition: 2s;
+    transform: scale(1.2);
+    background-color: var(--black);
+}
+
 header a:hover{
     text-decoration: underline white;
+}
+
+header img:hover{
+    transition: 2s;
+    transform: scale(1.2);
 }
 
 main{
@@ -136,7 +147,7 @@ footer p{
     border-color: var(--green);
     border-style: solid;
     border-radius: 20px;
-    margin: 32px 0.5rem;
+    margin: 2rem 0.5rem;
     display: flex;
     color: white;
     flex-direction: column;
@@ -167,6 +178,18 @@ footer p{
     align-items: center;
     text-align: center;
     max-width: 180px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.card:nth-child(2){
+    animation-delay: 1s;
+}
+
+.card:last-child{
+    animation-delay: 2s;
 }
 
 .card span{
@@ -197,15 +220,101 @@ footer p{
 .contact , .ubic , .social_medias , .img{
     margin-top: 1rem;
 }
-@media (max-width: 974px){
+@media (max-width: 980px){
     .btn__container{
-        margin-right: 5%;
         display:flex;
+        margin-right: 2rem;
     }
     .container-items{
         display: none;
     }
 }
-@media (min-width: 850px){
+@media (max-width: 876px){
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ubic{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 790px){
+    .about__section img{
+        height: 13rem;
+        width: 20rem;
+    }
+}
+
+@media (max-width: 732px){
+    .about__section{
+        display: flex;
+        flex-direction: column;
+    }
+    .txt_img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+    .txt_img .imgs{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 720px){
+    section{
+        margin-right: 2%;
+    }
+    .card__container{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    .card{
+        animation-name: left_right;
+    }
+}
+
+@media (max-width: 670px){
+    .txt_img .imgs{
+        display: flex;
+        flex-direction: column;
+    }
 
 }
+
+@media (max-width: 643px){
+    .description__section h2{
+        text-align: center;
+    }
+}
+/* -------ANIMACIONES------------------------------- */
+
+@keyframes floating {
+    from{
+      transform: translateY(2rem);
+    }
+    to{
+      transform: translateY(-2rem);
+    }
+  }
+
+@keyframes left_right {
+    from{
+      transform: translateX(2rem);
+    }
+    to{
+      transform: translateX(-2rem);
+    }
+  }
